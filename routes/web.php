@@ -7,6 +7,7 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AdminBooksController;
 use App\Http\Controllers\AdminBookingController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,10 +26,18 @@ Route::get('/', function () {
 
 Route::resource('/books', BookController::class);
 
-Route::resource('/booking', BookingController::class);
+Route::resource('/booking', BookingController::class)->middleware('auth');
 
 Route::get('/admin', [DashboardController::class, 'index']);
 
 Route::resource('/admin/books', AdminBooksController::class);
 
 Route::resource('/admin/booking', AdminBookingController::class);
+
+Route::get('/login', [LoginController::class, 'index'])->middleware('guest')->name('login');
+Route::post('/login', [LoginController::class, 'authenticate'])->middleware('guest');
+
+Route::post('/logout', [LoginController::class, 'logout'])->middleware('auth');
+
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
+Route::post('/register', [RegisterController::class, 'store'])->middleware('guest');

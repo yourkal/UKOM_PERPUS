@@ -67,7 +67,7 @@
                 </table>
               </div>
 
-              {{-- proses --}}
+              {{-- Info Buku --}}
               <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                 <h6 class="m-0 fw-bold">Informasi Buku</h6>
               </div>
@@ -90,7 +90,7 @@
                     <td>{{$booking->book->stock}}</td>
                   </tr>
                 </table>
-          </div>
+              </div>
       </div>
 
   </div>
