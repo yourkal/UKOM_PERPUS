@@ -19,25 +19,25 @@ use App\Http\Controllers\RegisterController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+// user
 Route::get('/', function () {
     return view('index');
 });
-
 Route::resource('/books', BookController::class);
-
 Route::resource('/booking', BookingController::class)->middleware('auth');
 
-Route::get('/admin', [DashboardController::class, 'index']);
+// admin
+Route::get('/admin', [DashboardController::class, 'index'])->middleware('admin');
+Route::resource('/admin/books', AdminBooksController::class)->middleware('admin');
+Route::resource('/admin/booking', AdminBookingController::class)->middleware('admin');
 
-Route::resource('/admin/books', AdminBooksController::class);
-
-Route::resource('/admin/booking', AdminBookingController::class);
-
+// login
 Route::get('/login', [LoginController::class, 'index'])->middleware('guest')->name('login');
 Route::post('/login', [LoginController::class, 'authenticate'])->middleware('guest');
 
+// logout
 Route::post('/logout', [LoginController::class, 'logout'])->middleware('auth');
 
+// register
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store'])->middleware('guest');
