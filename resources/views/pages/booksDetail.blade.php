@@ -68,9 +68,13 @@
                 <h6 class="m-0 fw-bold">Peminjaman</h6>
               </div>
               <div class="card-body">
+                @auth
                 <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
                   Pinjam Buku
                 </button>
+                @else
+                <a href="/login" class="btn btn-warning" >Pinjam Buku</a>
+                @endauth
               </div>
           </div>
       </div>
