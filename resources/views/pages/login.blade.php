@@ -4,7 +4,7 @@
 <section class="text-center pb-5">
   <!-- Background image -->
   <div class="p-5 bg-image" style="
-        background-image: url('https://images.unsplash.com/photo-1554034483-04fda0d3507b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        background-image: url('https://images.unsplash.com/photo-1595878715977-2e8f8df18ea8?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
         height: 300px;
         "></div>
   <!-- Background image -->

@@ -37,7 +37,7 @@
 @endsection
 
 @section('main-content')
-<div class="container my-5">
+<div class="container my-4">
   
   {{-- notif success --}}
   {{-- @if (session()->has('success'))

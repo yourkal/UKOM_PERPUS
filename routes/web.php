@@ -7,6 +7,7 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AdminBooksController;
 use App\Http\Controllers\AdminBookingController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterController;
 
 /*
@@ -20,9 +21,7 @@ use App\Http\Controllers\RegisterController;
 |
 */
 // user
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [HomeController::class, 'index']);
 Route::resource('/books', BookController::class);
 Route::resource('/booking', BookingController::class)->middleware('auth');
 

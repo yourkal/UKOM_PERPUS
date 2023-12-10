@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('books')->insert([
-            'title' => 'Judul Buku',
+            'title' => 'Judul Buku Fiksi',
             'code' => 'AF123',
             'author' => 'jono',
             'publisher' => 'gramed',
@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
             'stock' => 5,
         ]);
         DB::table('books')->insert([
-            'title' => 'Judul Buku',
+            'title' => 'Judul Buku Non Fiksi',
             'code' => 'AF456',
             'author' => 'jono',
             'publisher' => 'gramed',
@@ -42,7 +42,7 @@ class DatabaseSeeder extends Seeder
             'stock' => 5,
         ]);
         DB::table('books')->insert([
-            'title' => 'Judul Buku',
+            'title' => 'Judul Buku Fiksi',
             'code' => 'AF789',
             'author' => 'jono',
             'publisher' => 'gramed',
@@ -51,8 +51,44 @@ class DatabaseSeeder extends Seeder
             'stock' => 5,
         ]);
         DB::table('books')->insert([
-            'title' => 'Judul Buku',
+            'title' => 'Judul Buku Non Fiksi',
             'code' => 'AF012',
+            'author' => 'jono',
+            'publisher' => 'gramed',
+            'description' => 'ini desckripsi penting dari buku dengan judul (judul buku)...',
+            'category_id' => 2,
+            'stock' => 5,
+        ]);
+        DB::table('books')->insert([
+            'title' => 'Judul Buku Fiksi',
+            'code' => 'AF785239',
+            'author' => 'jono',
+            'publisher' => 'gramed',
+            'description' => 'ini desckripsi penting dari buku dengan judul (judul buku)...',
+            'category_id' => 1,
+            'stock' => 5,
+        ]);
+        DB::table('books')->insert([
+            'title' => 'Judul Buku Non Fiksi',
+            'code' => 'AF05212',
+            'author' => 'jono',
+            'publisher' => 'gramed',
+            'description' => 'ini desckripsi penting dari buku dengan judul (judul buku)...',
+            'category_id' => 2,
+            'stock' => 5,
+        ]);
+        DB::table('books')->insert([
+            'title' => 'Judul Buku Fiksi',
+            'code' => 'AF78239',
+            'author' => 'jono',
+            'publisher' => 'gramed',
+            'description' => 'ini desckripsi penting dari buku dengan judul (judul buku)...',
+            'category_id' => 1,
+            'stock' => 5,
+        ]);
+        DB::table('books')->insert([
+            'title' => 'Judul Buku Non Fiksi',
+            'code' => 'AF01522',
             'author' => 'jono',
             'publisher' => 'gramed',
             'description' => 'ini desckripsi penting dari buku dengan judul (judul buku)...',
