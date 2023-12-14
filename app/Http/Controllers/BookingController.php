@@ -33,7 +33,7 @@ class BookingController extends Controller
         // dd($request);
 
         $validate = $request->validate([
-            // 'user_id' => 'required',
+            'user_id' => 'required',
             'book_id' => 'required',
             'status' => 'required',
             'is_denda' => 'required',

@@ -31,6 +31,7 @@ class DatabaseSeeder extends Seeder
             'description' => 'ini desckripsi penting dari buku dengan judul (judul buku)...',
             'category_id' => 1,
             'stock' => 5,
+            'created_at' => '2023-12-12 01:24:14'
         ]);
         DB::table('books')->insert([
             'title' => 'Judul Buku Non Fiksi',
@@ -40,6 +41,7 @@ class DatabaseSeeder extends Seeder
             'description' => 'ini desckripsi penting dari buku dengan judul (judul buku)...',
             'category_id' => 2,
             'stock' => 5,
+            'created_at' => '2023-12-13 01:24:14'
         ]);
         DB::table('books')->insert([
             'title' => 'Judul Buku Fiksi',
@@ -49,6 +51,7 @@ class DatabaseSeeder extends Seeder
             'description' => 'ini desckripsi penting dari buku dengan judul (judul buku)...',
             'category_id' => 1,
             'stock' => 5,
+            'created_at' => '2023-12-13 01:24:14'
         ]);
         DB::table('books')->insert([
             'title' => 'Judul Buku Non Fiksi',
@@ -58,6 +61,7 @@ class DatabaseSeeder extends Seeder
             'description' => 'ini desckripsi penting dari buku dengan judul (judul buku)...',
             'category_id' => 2,
             'stock' => 5,
+            'created_at' => '2023-12-14 01:24:14'
         ]);
         DB::table('books')->insert([
             'title' => 'Judul Buku Fiksi',
@@ -67,6 +71,7 @@ class DatabaseSeeder extends Seeder
             'description' => 'ini desckripsi penting dari buku dengan judul (judul buku)...',
             'category_id' => 1,
             'stock' => 5,
+            'created_at' => '2023-12-14 01:24:14'
         ]);
         DB::table('books')->insert([
             'title' => 'Judul Buku Non Fiksi',
@@ -76,6 +81,7 @@ class DatabaseSeeder extends Seeder
             'description' => 'ini desckripsi penting dari buku dengan judul (judul buku)...',
             'category_id' => 2,
             'stock' => 5,
+            'created_at' => '2023-12-14 01:24:14'
         ]);
         DB::table('books')->insert([
             'title' => 'Judul Buku Fiksi',
@@ -85,6 +91,7 @@ class DatabaseSeeder extends Seeder
             'description' => 'ini desckripsi penting dari buku dengan judul (judul buku)...',
             'category_id' => 1,
             'stock' => 5,
+            'created_at' => '2023-12-14 01:24:14'
         ]);
         DB::table('books')->insert([
             'title' => 'Judul Buku Non Fiksi',
@@ -94,6 +101,25 @@ class DatabaseSeeder extends Seeder
             'description' => 'ini desckripsi penting dari buku dengan judul (judul buku)...',
             'category_id' => 2,
             'stock' => 5,
+            'created_at' => '2023-12-15 01:24:14'
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'admin',
+            'username' => 'admin',
+            'nis_nip' => '123456789098765',
+            'email' => 'admin@admin.com',
+            'role' => 'admin',
+            'password' => bcrypt('admin'),
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'fattah rizqi',
+            'username' => 'fattah',
+            'nis_nip' => '123456789058765',
+            'email' => 'fattah@gmail.com',
+            'role' => 'user',
+            'password' => bcrypt('12345'),
         ]);
     }
 }

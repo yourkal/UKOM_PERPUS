@@ -108,6 +108,7 @@
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             {{-- <input type="text" name="user_id" value="{{ auth()->user->id }}" hidden> --}}
             <input type="text" name="book_id" value="{{ $book->id }}" hidden>
+            <input type="text" name="user_id" value="{{ auth()->user()->id }}" hidden>
             <input type="text" name="status" value="{{ 'Diajukan' }}" hidden>
             <input type="text" name="is_denda" value="{{ 0 }}" hidden>
             <button type="submit" class="btn btn-warning">Setuju Pinjam</button>

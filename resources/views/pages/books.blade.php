@@ -2,8 +2,12 @@
 
 @section('style')
 <style>
+.card-wrapper{
+  margin-bottom: 1.5rem;
+}
 .card{
   margin-top:20px;
+  height: 100%;
 }
 .card .btn{
   border-radius:2px;
@@ -62,7 +66,7 @@
   </div>
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 mt-4">
   @foreach ($books as $book)
-  <a href="/books/{{ $book->id }}" class="col-md-4 mt-4 text-decoration-none">
+  <a href="/books/{{ $book->id }}" class="card-wrapper col-md-4 mt-4 text-decoration-none">
     <div class="card">
         <div class="card-img-block">
           @if($book->cover)
