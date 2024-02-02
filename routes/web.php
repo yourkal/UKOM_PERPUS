@@ -25,10 +25,12 @@ Route::get('/', [HomeController::class, 'index']);
 Route::resource('/books', BookController::class);
 Route::resource('/booking', BookingController::class)->middleware('auth');
 
-// admin
-Route::get('/admin', [DashboardController::class, 'index'])->middleware('admin');
+// admin and librarian
+Route::get('/admin', [DashboardController::class, 'index'])->middleware('adminandlibrarian');
+Route::resource('/admin/booking', AdminBookingController::class)->middleware('adminandlibrarian');
+
+// admin only
 Route::resource('/admin/books', AdminBooksController::class)->middleware('admin');
-Route::resource('/admin/booking', AdminBookingController::class)->middleware('admin');
 
 // login
 Route::get('/login', [LoginController::class, 'index'])->middleware('guest')->name('login');

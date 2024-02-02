@@ -121,5 +121,14 @@ class DatabaseSeeder extends Seeder
             'role' => 'user',
             'password' => bcrypt('12345'),
         ]);
+
+        DB::table('users')->insert([
+            'name' => 'librarian',
+            'username' => 'librarian',
+            'nis_nip' => '123456789092765',
+            'email' => 'librarian@gmail.com',
+            'role' => 'librarian',
+            'password' => bcrypt('librarian'),
+        ]);
     }
 }
