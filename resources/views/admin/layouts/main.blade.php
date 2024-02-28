@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Perpus40 | Dashboard</title>
+    <title>Perpustakaan SMKN 1 Cisarua | Dashboard</title>
 
     {{-- Style Bootstrap --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -61,7 +61,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; PERPUS40 2023</span>
+                        <span>Copyright &copy; Perpustakaan SMKN 1 Cisarua 2023</span>
                     </div>
                 </div>
             </footer>

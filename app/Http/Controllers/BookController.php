@@ -10,13 +10,15 @@ class BookController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        return view("pages.books", [
-            'books' => Book::all(),
-        ]);
+    public function index(Request $request)
+{
+    if ($request->has('title')) {
+        $books = Book::where('title', 'LIKE', '%' . $request->title . '%')->get();
+    } else {
+        $books = Book::all();
     }
-
+    return view('pages.books', ['books' => $books]);
+}
     /**
      * Show the form for creating a new resource.
      */
@@ -66,4 +68,15 @@ class BookController extends Controller
     {
         //
     }
+
+    // public function search(Request $request) {
+    //     if ($request->has('search')) {
+    //         $books = Book::where('title', 'like', '%' . $request->search . '%')->get();
+    //     } else {
+    //         $books = Book::all();
+    //     }
+    //     return view('pages.books', [
+    //      'books' => $books 
+    //     ]);
+    // }
 }

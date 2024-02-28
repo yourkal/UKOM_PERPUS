@@ -40,7 +40,7 @@ class AdminBooksController extends Controller
             'category_id' => 'required',
             'description' => 'required|min:10',
             'stock' => 'required',
-            'cover' => 'image|file|max:1024',
+            'cover' => 'image|file',
         ]);
 
         if (isset($validatedData['cover'])) {

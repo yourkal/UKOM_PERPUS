@@ -5,7 +5,7 @@
       <div class="sidebar-brand-icon rotate-n-15">
         <i class="bi bi-book-fill"></i>
       </div>
-      <div class="sidebar-brand-text mx-3">perpus40</div>
+      <div class="sidebar-brand-text mx-3">Perpustakaan SMKN 1 Cisarua</div>
   </a>
 
   <!-- Divider -->

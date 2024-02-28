@@ -22,7 +22,10 @@ use App\Http\Controllers\RegisterController;
 */
 // user
 Route::get('/', [HomeController::class, 'index']);
-Route::resource('/books', BookController::class);
+Route::resource('/books', BookController::class,);
+// Route::get('/books', [BookController::class,'index']);
+// Route::get('/books/{id}', [BookController::class,'show']);
+// Route::get('/books', [BookController::class,'search']);
 Route::resource('/booking', BookingController::class)->middleware('auth');
 
 // admin and librarian
