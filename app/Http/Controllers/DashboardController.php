@@ -17,6 +17,7 @@ class DashboardController extends Controller
             'countCategories' => Category::count(),
             'countBookings' => Booking::count(),
             'countUsers' => User::where('role', 'member')->count(),
+            // 'countUsers' => User::count(),
 
             'latestBooks' => Book::latest()->limit(5)->get(),
             'todayBookings' => Booking::whereDay('created_at', now()->day)->limit(5)->get(),

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Book;
 use App\Models\Booking;
 use Illuminate\Http\Request;
 
@@ -57,10 +58,11 @@ class BookingController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Booking $booking)
+    public function show(Booking $booking, Book $book)
     {
         return view('pages.bookingDetail', [
             'booking' => $booking,
+            'book' => $book,
         ]);
     }
 

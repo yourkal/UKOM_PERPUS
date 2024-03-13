@@ -18,10 +18,15 @@
     <div class="col-md-3">
       <div class="card shadow mb-4">
           <div class="card-body">
-            <img src="{{ asset('img/bookCoverDefault.png') }}" class="object-fit-contain align-items-center" style="width: 100%" alt="...">
+            @if($book->cover)
+          <img class="card-img-top" src="/storage/{{ $book->cover }}" alt="Card image cap">
+          @else
+          <img class="card-img-top" src="{{ asset('img/bookCoverDefault.png') }}" alt="Card image cap">
+          @endif
           </div>
       </div>
     </div>
+
 
       <!-- Information -->
       <div class="col-md-8">

@@ -267,13 +267,14 @@
             <h1>Jelajahi Dunia Ilmu di Perpustakaan SMKN 1 Cisarua!</h1>
             <p>Temukan buku terkini untuk memperluas wawasan. Jelajahi topik favorit dan buka pintu menuju dunia pengetahuan
                 yang lebih menarik!</p>
-            <a href="/login">Start Explore!<i class="bi bi-arrow-right-square-fill fs-2"></i></a>
+            <a href="/login">Login Yuk!<i class="bi bi-arrow-right-square-fill fs-2"></i></a>
         </div>
 
         {{-- <div class="table">
-            <img src="{{ asset('img/table.png') }}" alt="">
-        </div> --}}
+    <img src="{{ asset('img/table.png') }}" alt="">
+</div> --}}
     </section>
+
 
     <section class="categories mb-5">
         <div class="container-fluid pb-4">
@@ -513,7 +514,7 @@
                 </div>
 
                 <div class="more">
-                    <a href="/books" class="text-decoration-none">See more</a>
+                    <a href="/books" class="text-decoration-none">Lihat Buku Lainnya</a>
                 </div>
             </div>
         </div>
@@ -626,5 +627,31 @@
                 duration: 1800,
             });
         }
+
+        let slideIndex = 0;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slider .cta');
+            if (n >= slides.length) {
+                slideIndex = 0;
+            }
+            if (n < 0) {
+                slideIndex = slides.length - 1;
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            slides[slideIndex].style.display = 'block';
+        }
+
+        function nextSlide() {
+            showSlide(slideIndex += 1);
+        }
+
+        function prevSlide() {
+            showSlide(slideIndex -= 1);
+        }
+
+        showSlide(slideIndex);
     </script>
 @endsection
